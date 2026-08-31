@@ -565,3 +565,58 @@ section > .wrap > .team-group-title:not(:first-child) {
   color: var(--text-muted);
   min-height: 220px;
 }
+
+.pub-card p.blurb a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Featured publication ---------- */
+.pub-card.featured {
+  background: linear-gradient(120deg, var(--dusk), var(--dawn));
+  color: #fff;
+  padding: 36px;
+  margin-bottom: 12px;
+}
+
+.pub-card.featured .badge { background: rgba(255, 255, 255, 0.25); }
+.pub-card.featured h3 { font-size: 1.3rem; }
+.pub-card.featured .pub-meta { color: rgba(255, 255, 255, 0.85); }
+.pub-card.featured p.blurb { color: rgba(255, 255, 255, 0.92); }
+
+.pub-card.featured a.read-more {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.pub-card.featured a.read-more:hover { border-bottom-color: #fff; }
+
+/* ---------- Publication / news cover images ---------- */
+.pub-card-media {
+  position: relative;
+  margin: -26px -26px 0;
+}
+
+.pub-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.card-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(36, 22, 35, 0.78);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
