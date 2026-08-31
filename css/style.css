@@ -1,16 +1,19 @@
 :root {
-  --night: #1a1f3d;
-  --dusk: #4a4184;
-  --dawn: #e8734f;
-  --day: #f5b342;
-  --bg: #faf8f5;
+  --night: #241623;
+  --dusk: #693e52;
+  --dawn: #ea6e44;
+  --day: #f3a560;
+  --blue: #5a8eb1;
+  --bg: #fbf5f0;
   --surface: #ffffff;
-  --text: #1a1f3d;
-  --text-muted: #5c6178;
-  --border: #e7e3db;
+  --text: #241623;
+  --text-muted: #6a5560;
+  --border: #e9dcd4;
   --radius: 14px;
   --max-width: 1120px;
-  --shadow: 0 4px 20px rgba(26, 31, 61, 0.06);
+  --shadow: 0 4px 20px rgba(42, 26, 35, 0.08);
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -19,10 +22,18 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+}
+
+h1, h2, h3,
+.logo, .btn, .nav-links a,
+.eyebrow, .eyebrow-dark,
+.badge, .stat-num, .filter-btn,
+.team-card .role {
+  font-family: var(--font-display);
 }
 
 img { max-width: 100%; display: block; }
@@ -57,20 +68,14 @@ a { color: inherit; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--night);
 }
 
-.logo-mark {
-  width: 30px;
+.logo img {
   height: 30px;
-  border-radius: 50%;
-  background: conic-gradient(from 200deg, var(--night), var(--dusk), var(--dawn), var(--day), var(--night));
-  flex-shrink: 0;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -287,7 +292,7 @@ h2 {
 .research-grid .card:nth-child(1) .card-top-bar { background: var(--dawn); }
 .research-grid .card:nth-child(2) .card-top-bar { background: var(--dusk); }
 .research-grid .card:nth-child(3) .card-top-bar { background: var(--day); }
-.research-grid .card:nth-child(4) .card-top-bar { background: var(--night); }
+.research-grid .card:nth-child(4) .card-top-bar { background: var(--blue); }
 .research-grid .card:nth-child(5) .card-top-bar { background: var(--dawn); }
 
 /* ---------- Capabilities (two-column) ---------- */
