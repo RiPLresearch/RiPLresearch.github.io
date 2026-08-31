@@ -249,6 +249,16 @@ h2 {
   margin: 0;
 }
 
+.about-section {
+  position: relative;
+  background-image:
+    linear-gradient(to bottom, rgba(251, 245, 240, 0.3) 0%, rgba(251, 245, 240, 0.6) 55%, var(--bg) 100%),
+    url('../assets/texture-sand-ripples.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
 .about-section p {
   font-size: 1.05rem;
   color: var(--text-muted);
