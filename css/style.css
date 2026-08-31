@@ -410,6 +410,18 @@ footer {
 .page-hero p { margin: 0; max-width: 620px; color: rgba(255,255,255,0.85); }
 
 /* ---------- Team ---------- */
+.team-group-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 20px;
+}
+
+section > .wrap > .team-group-title:not(:first-child) {
+  margin-top: 52px;
+}
+
 .team-grid {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
