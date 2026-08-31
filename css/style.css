@@ -602,10 +602,12 @@ section > .wrap > .team-group-title:not(:first-child) {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   display: block;
   border-radius: var(--radius) var(--radius) 0 0;
 }
+
+.pub-card-image.obj-top { object-position: top; }
 
 .card-tag {
   position: absolute;
