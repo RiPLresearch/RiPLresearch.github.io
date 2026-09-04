@@ -630,6 +630,8 @@ section > .wrap > .team-group-title:not(:first-child) {
 
 .pub-card.featured a.read-more:hover { border-bottom-color: #fff; }
 
+.pub-card.featured .pub-card-media { margin: -36px -36px 0; }
+
 /* ---------- Publication / news cover images ---------- */
 .pub-card-media {
   position: relative;
