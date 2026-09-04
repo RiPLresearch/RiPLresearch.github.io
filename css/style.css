@@ -238,6 +238,17 @@ a { color: inherit; }
 
 .btn-secondary:hover { background: rgba(255,255,255,0.12); }
 
+.btn-cta {
+  background: var(--dawn);
+  color: #fff;
+}
+
+.btn-cta:hover { box-shadow: 0 6px 18px rgba(234, 110, 68, 0.35); }
+
+.section-head .theme-cta-text { margin-top: 18px; }
+
+.section-head .btn-cta { margin-top: 14px; }
+
 /* ---------- Sections ---------- */
 section { padding: 76px 0; }
 
