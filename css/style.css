@@ -245,9 +245,7 @@ a { color: inherit; }
 
 .btn-cta:hover { box-shadow: 0 6px 18px rgba(234, 110, 68, 0.35); }
 
-.section-head .theme-cta-text { margin-top: 18px; }
-
-.section-head .btn-cta { margin-top: 14px; }
+.about-section .btn-cta { margin-top: 10px; }
 
 /* ---------- Sections ---------- */
 section { padding: 76px 0; }
