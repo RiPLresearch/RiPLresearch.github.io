@@ -473,6 +473,60 @@ footer {
 
 .btn-ghost:hover { background: rgba(105, 62, 82, 0.08); }
 
+.group-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 52px 0 20px;
+}
+
+.group-head .team-group-title { margin: 0; }
+
+.scroll-controls { display: flex; gap: 8px; }
+.scroll-controls[hidden] { display: none; }
+
+.scroll-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--dusk);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.scroll-btn:hover:not(:disabled) { background: rgba(105, 62, 82, 0.08); border-color: var(--dusk); }
+.scroll-btn:disabled { opacity: 0.35; cursor: default; }
+
+.pub-grid.is-scroller {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-left: 4px;
+  padding: 4px 4px 22px;
+  margin: -4px -4px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.pub-grid.is-scroller > .pub-card {
+  flex: 0 0 calc((100% - 72px) / 3.25);
+  scroll-snap-align: start;
+}
+
+.pub-grid.is-scroller:focus-visible { outline: 2px solid var(--dawn); outline-offset: 2px; border-radius: var(--radius); }
+
+@media (max-width: 760px) {
+  .pub-grid.is-scroller > .pub-card { flex-basis: 82%; }
+}
+
 /* ---------- Team ---------- */
 .team-group-title {
   font-family: var(--font-display);

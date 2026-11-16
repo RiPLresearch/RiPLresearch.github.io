@@ -41,6 +41,51 @@ document.addEventListener("DOMContentLoaded", function () {
     render(false);
   });
 
+  document.querySelectorAll(".pub-grid[data-scroller]").forEach(function (grid) {
+    var title = grid.previousElementSibling;
+    if (!title) return;
+
+    var head = document.createElement("div");
+    head.className = "group-head";
+    title.before(head);
+    head.appendChild(title);
+
+    var controls = document.createElement("div");
+    controls.className = "scroll-controls";
+    function makeBtn(dir) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "scroll-btn";
+      b.setAttribute("aria-label", "Scroll " + (dir < 0 ? "back" : "forward"));
+      b.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + (dir < 0 ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7") + '"/></svg>';
+      b.addEventListener("click", function () {
+        var card = grid.querySelector(".pub-card");
+        var step = card ? card.getBoundingClientRect().width + 24 : grid.clientWidth * 0.8;
+        grid.scrollBy({ left: dir * step, behavior: "smooth" });
+      });
+      return b;
+    }
+    var prev = makeBtn(-1);
+    var next = makeBtn(1);
+    controls.appendChild(prev);
+    controls.appendChild(next);
+    head.appendChild(controls);
+
+    grid.classList.add("is-scroller");
+    grid.setAttribute("tabindex", "0");
+    grid.setAttribute("role", "region");
+
+    function update() {
+      var max = grid.scrollWidth - grid.clientWidth;
+      controls.hidden = max <= 1;
+      prev.disabled = grid.scrollLeft <= 1;
+      next.disabled = grid.scrollLeft >= max - 1;
+    }
+    grid.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+
   var filterBtns = document.querySelectorAll(".filter-btn");
   var cards = document.querySelectorAll(".pub-card[data-type]");
   filterBtns.forEach(function (btn) {
