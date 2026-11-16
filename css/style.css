@@ -453,6 +453,26 @@ footer {
 
 .pubs-section { padding-top: 40px; }
 
+.team-group-title { scroll-margin-top: 90px; }
+
+.pub-grid.is-collapsed > .pub-card:nth-child(n+7) { display: none; }
+
+.show-more-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--dusk);
+  border-color: var(--dusk);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-ghost:hover { background: rgba(105, 62, 82, 0.08); }
+
 /* ---------- Team ---------- */
 .team-group-title {
   font-family: var(--font-display);
