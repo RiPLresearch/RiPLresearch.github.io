@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function render(expanded) {
       grid.classList.toggle("is-collapsed", !expanded);
       btn.setAttribute("aria-expanded", expanded);
-      btn.textContent = expanded ? "Show fewer" : "Show all " + total + " papers";
+      btn.textContent = expanded ? "Show fewer" : "Show all";
     }
 
     btn.addEventListener("click", function () {
