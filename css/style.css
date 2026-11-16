@@ -451,6 +451,8 @@ footer {
 
 #news { scroll-margin-top: 90px; }
 
+.pubs-section { padding-top: 40px; }
+
 /* ---------- Team ---------- */
 .team-group-title {
   font-family: var(--font-display);
